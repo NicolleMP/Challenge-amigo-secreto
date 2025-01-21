@@ -9,6 +9,16 @@ function adicionarAmigo() {
     } else {
         amigos.push(nome);
         limparCampo();
+        exibirAmigos();
+    }
+}
+
+function exibirAmigos() {
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
+
+    for (let i = 0; i < amigos.length; i++) {
+        listaAmigos.innerHTML += `<li>${amigos[i]}</li>`;
     }
 }
 
